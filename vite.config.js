@@ -11,4 +11,9 @@ export default defineConfig({
       },
     },
   },
+  preview: {
+    host: true,
+    port: Number(process.env.PORT) || 4173,
+    allowedHosts: ['.onrender.com', 'localhost', '127.0.0.1'],
+  },
 })
