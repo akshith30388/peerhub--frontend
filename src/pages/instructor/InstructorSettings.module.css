@@ -1,0 +1,113 @@
+.body {
+  padding: 8px 24px 24px;
+}
+
+.errorBox {
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1.5px solid rgba(220, 38, 38, 0.25);
+  border-left: 4px solid var(--error);
+  border-radius: 8px;
+  color: var(--error);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.row:last-child { border-bottom: none; }
+
+.key {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+  min-width: 200px;
+}
+
+.val {
+  font-size: 13px;
+  color: var(--gray-900);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+.val:hover {
+  background: var(--gray-100);
+}
+
+.editHint {
+  font-size: 11px;
+  color: var(--gray-500);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.val:hover .editHint {
+  opacity: 1;
+}
+
+.editRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.editInput {
+  font-size: 13px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
+  outline: none;
+  min-width: 280px;
+  background: var(--white);
+  color: var(--gray-900);
+  transition: all 0.2s ease;
+}
+.editInput:focus {
+  box-shadow: 0 0 0 3px var(--primary-50);
+}
+
+.saveBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(99, 102, 241, 0.2);
+}
+.saveBtn:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+}
+.saveBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.cancelBtn {
+  padding: 8px 16px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--gray-700);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.cancelBtn:hover {
+  border-color: var(--gray-400);
+  color: var(--gray-900);
+  background: var(--gray-50);
+}

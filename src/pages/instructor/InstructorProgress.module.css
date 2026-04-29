@@ -1,0 +1,21 @@
+.tableWrap { padding: 6px 22px 22px; overflow-x: auto; }
+
+.table { width: 100%; border-collapse: collapse; }
+.table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gray-600); font-weight: 700; padding: 0 0 12px; text-align: left; }
+.table td { padding: 13px 0; border-top: 1px solid var(--gray-100); font-size: 13px; vertical-align: middle; }
+.table tr:hover td { background: var(--gray-50); }
+
+.rank {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--body); font-size: 13px; font-weight: 900;
+  flex-shrink: 0;
+  background: var(--primary-100);
+  color: var(--primary);
+}
+
+.studentCell { display: flex; align-items: center; gap: 10px; }
+.studentName { font-weight: 700; font-size: 13px; }
+
+.tdMuted { color: var(--gray-600); }
+.tdScore { font-family: var(--body); font-size: 15px; font-weight: 900; color: var(--primary); }

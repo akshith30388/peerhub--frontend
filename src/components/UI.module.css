@@ -1,0 +1,139 @@
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-xs);
+}
+.badge::before { content: '●'; font-size: 5px; }
+.done     { background: var(--success-50); color: var(--success); }
+.progress { background: var(--primary-50); color: var(--primary); }
+.pending  { background: var(--warning-50); color: var(--warning); }
+
+/* Progress bar */
+.pbTrack {
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.pbFill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 0 10px rgba(99,102,241,.3);
+}
+.pbDone { background: linear-gradient(90deg, var(--success), var(--success-light)); }
+
+/* Stat card */
+.statCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.statCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.statChip {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.chipOrange { background: var(--orange-100); }
+.chipGreen  { background: var(--success-100); }
+.chipBlue   { background: var(--primary-100); }
+.chipYellow { background: var(--warning-100); }
+
+.statValue {
+  font-family: var(--body);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--gray-900);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.statLabel  { font-size: 12px; font-weight: 700; color: var(--gray-500); letter-spacing: 0.03em; text-transform: uppercase; }
+.statNote   { font-size: 12px; font-weight: 600; color: var(--primary); margin-top: 8px; }
+
+/* Card */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--gray-50);
+}
+.cardTitle {
+  font-family: var(--body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: 0.3px;
+}
+.cardAction {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.cardAction:hover {
+  background: var(--primary-50);
+  color: var(--primary-dark);
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow-xs);
+}
+
+/* Stars */
+.stars {
+  display: flex;
+  gap: 4px;
+}
+.starBtn {
+  font-size: 18px;
+  background: none;
+  border: none;
+  padding: 2px 3px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1;
+}
+.starBtn:hover { transform: scale(1.3); }
+.starBtn:active { transform: scale(0.95); }
